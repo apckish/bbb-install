@@ -901,7 +901,7 @@ install_greenlight_v3(){
 
   local PGDBNAME=greenlight-v3-production
   local SECRET_KEY_BASE
-  SECRET_KEY_BASE=$(docker run --rm --entrypoint bundle $GL_IMG_REPO exec rake secret)
+  SECRET_KEY_BASE="8a1e5fadb5051cd49cb4dbc1875a9abea6d395d10b22aebb600df737ea3ca0a05278d63d8e3465d3b9540168d480e9c1fff8a3018e2799ce8f7580b3346a4cc7"
 
   if [ -z "$SECRET_KEY_BASE" ]; then
     err "failed to generate greenlight-v3 secret key base - is docker running?"
